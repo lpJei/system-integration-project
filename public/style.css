@@ -1,0 +1,455 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #4f46e5;
+  --secondary: #10b981;
+  --dark: #1e293b;
+  --light: #f8fafc;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f1f5f9;
+  color: var(--dark);
+  line-height: 1.6;
+}
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    rgba(79, 70, 229, 0.1) 0%,
+    rgba(16, 185, 129, 0.1) 100%
+  );
+}
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.skill-chip {
+  background-color: rgba(79, 70, 229, 0.1);
+  color: var(--primary);
+  transition: all 0.2s ease;
+}
+.skill-chip:hover {
+  background-color: var(--primary);
+  color: white;
+}
+.social-icon {
+  transition: all 0.2s ease;
+  color: var(--dark);
+}
+.social-icon:hover {
+  color: var(--primary);
+  transform: scale(1.2);
+}
+.github-icon {
+  transition: all 0.2s ease;
+  color: var(--dark);
+}
+.github-icon:hover {
+  color: white;
+  background-color: var(--dark);
+  transform: scale(1.1);
+}
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.github-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+.github-profile img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.github-profile .info {
+  display: flex;
+  flex-direction: column;
+}
+.github-profile .info span {
+  font-size: 0.9em;
+  color: #555;
+  display: block;
+  margin: 2px 0;
+}
+.portfolio-iframe {
+  width: 100%;
+  height: 300px; /* Adjust as needed */
+  border: none;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  transition: all 0.3s ease;
+}
+.modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.modal.show .modal-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding-top: 20px;
+}
+
+.github-modal-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.github-modal-profile img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+  border: 4px solid var(--primary);
+}
+
+.github-modal-profile h2 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.github-modal-profile .username {
+  color: var(--primary);
+  font-size: 1.2em;
+}
+
+.github-modal-profile .bio {
+  max-width: 500px;
+  line-height: 1.6;
+  margin: 15px auto;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.github-modal-profile h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.github-modal-profile p {
+  color: #555;
+  margin-top: 5px;
+}
+
+.github-stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.github-stats div {
+  text-align: center;
+}
+
+.github-stats div strong {
+  display: block;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.github-repos {
+  margin-top: 20px;
+}
+
+.github-repos h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+.github-repo-item {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.github-repo-item h4 {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.github-repo-item p {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.github-repo-item a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.github-repo-item a:hover {
+  text-decoration: underline;
+}
+
+.portfolio-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.portfolio-section h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+.portfolio-preview {
+  width: 100%;
+  height: 250px; /* Adjust as needed for preview */
+  background-color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #666;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden; /* Ensure image fits */
+}
+
+.portfolio-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area */
+}
+
+/* Projects Section Styles */
+.repo-card {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.repo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.repo-content {
+  padding: 1.5rem;
+}
+
+.repo-stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Activity Section Styles */
+.activity-card {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.activity-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.activity-date {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Netflix Card Styles */
+.netflix-card {
+  width: 100%;
+  max-width: 700px; /* Adjust max-width for a larger card */
+  aspect-ratio: 16/9; /* Common aspect ratio for video content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* For absolute positioning of nav buttons */
+}
+
+#portfolio-carousel {
+  flex-grow: 1; /* Allow carousel to take available height */
+  position: relative;
+  overflow: hidden; /* Hide overflowing images */
+}
+
+#carousel-inner {
+  height: 100%;
+  display: flex; /* Ensure flex for horizontal layout */
+  transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smoother transition */
+  will-change: transform; /* Optimize animation performance */
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333; /* Placeholder background */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  display: block;
+}
+
+.carousel-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+.carousel-item:hover .carousel-item-overlay {
+  opacity: 1; /* Show on hover */
+}
+
+.carousel-item-overlay h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-item-overlay p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

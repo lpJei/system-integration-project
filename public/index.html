@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Portfolio | Creative Professionals</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  
+  <body class="min-h-screen">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <span class="text-2xl font-bold text-indigo-600"
+              >Port Hub</span
+            >
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a href="#" class="nav-link text-gray-700 hover:text-indigo-600"
+              >Home</a
+            >
+            <a
+              href="#projects"
+              class="nav-link text-gray-700 hover:text-indigo-600"
+              >Projects</a
+            >
+            <a
+              href="#activity"
+              class="nav-link text-gray-700 hover:text-indigo-600"
+              >Activity</a
+            >
+          </nav>
+          <button class="md:hidden text-gray-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-20">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+              Meet Our <span class="text-indigo-600">Creative Team</span>
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">
+              We're a collective of passionate professionals specializing in
+              design, development, and digital strategy. Together, we create
+              impactful solutions.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#team"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300"
+                >Meet the Team</a
+              >
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center">
+            <div
+              class="netflix-card bg-gray-900 rounded-xl shadow-2xl overflow-hidden relative"
+            >
+              <div id="portfolio-carousel" class="w-full h-full relative">
+                <div
+                  id="carousel-inner"
+                  class="flex h-full transition-transform duration-500 ease-in-out"
+                >
+                  <!-- Carousel items will be dynamically loaded here -->
+                </div>
+                <button id="prevBtn" class="carousel-nav-btn left-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+                <button id="nextBtn" class="carousel-nav-btn right-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="p-6 text-white text-center">
+                <h3 id="portfolio-title" class="text-2xl font-bold mb-2"></h3>
+                <p
+                  id="portfolio-description"
+                  class="text-gray-400 text-sm mb-4"
+                ></p>
+                <a
+                  id="viewPortfolioLink"
+                  href="#"
+                  target="_blank"
+                  class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-medium transition duration-300 inline-block"
+                >
+                  View Portfolio
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Our <span class="text-indigo-600">Core</span> Team
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Each member brings unique skills and perspectives that complement
+            each other perfectly.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Team Member 1 -->
+          <div
+            class="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300"
+          >
+            <div class="relative">
+              <img
+                src="components/lj.jpg"
+                alt="Loisse Joy Parot's image"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4"
+              >
+                <h3 class="text-white text-xl font-semibold">
+                  Loisse Joy Parot
+                </h3>
+                <p class="text-indigo-200">
+                  Full Stack Developer & Documentation
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mt-4">
+                <a
+                  href="https://lpjei.github.io/eljei/?fbclid=IwY2xjawLPZRBleHRuA2FlbQIxMABicmlkETFFdTg5akZ5UE1zdzF1emNjAR4GqvaMv3Uw2po6DJVgLEXKwyJUDxzr-J-WdCq0-vGnpEpMIu5KgUSpSAoqfQ_aem_lzA1VUY-ohUK4kncE126ag"
+                  target="_blank"
+                  class="bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-medium py-2 px-4 rounded-lg transition duration-300"
+                >
+                  View Portfolio
+                </a>
+                <a
+                  href="https://github.com/lpJei?fbclid=IwY2xjawLPZdZleHRuA2FlbQIxMABicmlkETFFdTg5akZ5UE1zdzF1emNjAR4ZGnaym4MjnW5XFcvNSqrnNGYSARdhOpgq0bH9w56uFnOQUQgj7-L277GrPQ_aem_IDemV7vmJKbWYZQWrvvJDw"
+                  target="_blank"
+                  class="github-icon p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <div id="github-profile-lpJei" class="github-profile w-full">
+                <!-- GitHub profile will be loaded here -->
+              </div>
+              <button
+                data-username="lpJei"
+                onclick="openModal('lpJei', 'https://lpjei.github.io/eljei/')"
+                class="bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-medium py-2 px-4 rounded-lg transition duration-300 w-full text-center mt-4"
+              >
+                View Profile
+              </button>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div
+            class="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300"
+          >
+            <div class="relative">
+              <img
+                src="components/arcy.jpg"
+                alt="Arcy Lunas' image"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4"
+              >
+                <h3 class="text-white text-xl font-semibold">Arcy Lunas</h3>
+                <p class="text-green-200">Frond-end Developer & UI Designer</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mt-4">
+                <a
+                  href="https://rclunas.github.io/arcy_lunas.github.io/"
+                  target="_blank"
+                  class="bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-medium py-2 px-4 rounded-lg transition duration-300"
+                >
+                  View Portfolio
+                </a>
+                <a
+                  href="https://github.com/rclunas"
+                  target="_blank"
+                  class="github-icon p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <div id="github-profile-rclunas" class="github-profile w-full">
+                <!-- GitHub profile will be loaded here -->
+              </div>
+              <button
+                data-username="rclunas"
+                onclick="openModal('rclunas', 'https://rclunas.github.io/arcy_lunas.github.io/')"
+                class="bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-medium py-2 px-4 rounded-lg transition duration-300 w-full text-center mt-4"
+              >
+                View Profile
+              </button>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div
+            class="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300"
+          >
+            <div class="relative">
+              <img
+                src="components/andrei.jpg"
+                alt="John Andrei Balbin's image"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4"
+              >
+                <h3 class="text-white text-xl font-semibold">
+                  John Andrei Balbin
+                </h3>
+                <p class="text-yellow-200">Documentation</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mt-4">
+                <a
+                  href="https://andrei-214.github.io/andrei.github.io/"
+                  target="_blank"
+                  class="bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-medium py-2 px-4 rounded-lg transition duration-300"
+                >
+                  View Portfolio
+                </a>
+                <a
+                  href="https://github.com/andrei-214"
+                  target="_blank"
+                  class="github-icon p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <div id="github-profile-andrei-214" class="github-profile w-full">
+                <!-- GitHub profile will be loaded here -->
+              </div>
+              <button
+                onclick="openModal('andrei-214', 'https://andrei-214.github.io/andrei.github.io/')"
+                class="bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-medium py-2 px-4 rounded-lg transition duration-300 w-full text-center mt-4"
+              >
+                View Profile
+              </button>
+            </div>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div
+            class="team-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300"
+          >
+            <div class="relative">
+              <img
+                src="components/sheene.jpg"
+                alt="Sheene Joshua Lisondra's image"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4"
+              >
+                <h3 class="text-white text-xl font-semibold">
+                  Sheene Joshua Lisondra
+                </h3>
+                <p class="text-blue-200">Back-end Developer</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mt-4">
+                <a
+                  href="https://lisondrasheene11.github.io/sheenelisondra.github.io/"
+                  target="_blank"
+                  class="bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-medium py-2 px-4 rounded-lg transition duration-300"
+                >
+                  View Portfolio
+                </a>
+                <a
+                  href="https://github.com/lisondrasheene11"
+                  target="_blank"
+                  class="github-icon p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <div id="github-profile-lisondrasheene11" class="github-profile w-full">
+                <!-- GitHub profile will be loaded here -->
+              </div>
+              <button
+                onclick="openModal('lisondrasheene11', 'https://lisondrasheene11.github.io/sheenelisondra.github.io/')"
+                class="bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-medium py-2 px-4 rounded-lg transition duration-300 w-full text-center mt-4"
+              >
+                View Profile
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Our <span class="text-indigo-600">Projects</span>
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Explore repositories created by our talented team members.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="team-repos"
+        >
+          <!-- Repositories will be loaded here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Activity Section -->
+    <section id="activity" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Recent <span class="text-indigo-600">Activity</span>
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Latest updates from our team members' repositories.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="recent-activity">
+          <!-- Recent activity will be loaded here by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- The Modal -->
+    <div id="profileModal" class="modal" style="display: none">
+      <!-- Modal content -->
+      <div class="modal-content" style="margin: 15% auto; padding: 20px">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <div
+          class="modal-body"
+          id="modal-body-content"
+          style="max-height: 80vh; overflow-y: auto"
+        >
+          <!-- GitHub profile details and recent repos will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js">
+    </script>
+  </body>
+</html>
