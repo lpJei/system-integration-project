@@ -18,8 +18,9 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api/github", async (req, res) => {
-    const githubApiUrl = `https://api.github.com${req.url.replace("/api/github", "")}`;
-
+    const githubApiPath = req.url; // Just the path part (e.g., /users/lpJei)
+    const githubApiUrl = `https://api.github.com${githubApiPath}`;
+    
     try {
         const response = await fetch(githubApiUrl, {
         headers: {
