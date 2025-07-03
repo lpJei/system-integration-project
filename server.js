@@ -17,10 +17,10 @@ const __dirname = path.dirname(__filename);
 // Serve static files
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/api/github", async (req, res) => {
-    const githubApiPath = req.url; // Just the path part (e.g., /users/lpJei)
-    const githubApiUrl = `https://api.github.com${githubApiPath}`;
-    
+app.get("/api/github/:path(*)", async (req, res) => {
+    const githubPath = req.params.path;
+    const githubApiUrl = `https://api.github.com/${githubPath}`;
+
     try {
         const response = await fetch(githubApiUrl, {
         headers: {
